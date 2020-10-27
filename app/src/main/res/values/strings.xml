@@ -1,0 +1,96 @@
+<resources>
+<!--    <string name="app_name">Foodie</string>-->
+    <string name="app_name">Kutumb</string>
+    <string name="title_home">Home</string>
+    <string name="search">Search</string>
+    <string name="orders">Orders</string>
+    <string name="profile">Profile</string>
+    <string name="account">Account</string>
+    <string name="delivery_location">  Search delivery location</string>
+    <string name="current_location">Current Location</string>
+    <string name="enable_loc_service">Enable Location Service</string>
+    <string name="delivery_address">Delivery Address</string>
+    <string name="next">Next</string>
+    <string name="skip">Skip</string>
+    <string name="start">Got It</string>
+    <string name="signup">New User? SignUp</string>
+    <string name="fgt_pwd">Forgot Password?</string>
+    <string name="login">Login</string>
+    <string name="usernam">Mobile</string>
+    <string name="password">Password</string>
+    <string name="mobile">Enter 10 digit mobile no</string>
+    <string name="detail">Item Detail</string>
+    <string name="quantity">Quantity</string>
+    <string name="enter_firstname">First Name</string>
+    <string name="enter_last_name">Last Name</string>
+    <string name="enter_pincode">Pincode</string>
+    <string name="street_address">Street Address</string>
+    <string name="add_line_one">Flat/House No./Floor/Building</string>
+    <string name="add_line_two">Colony/Street/Locality</string>
+    <string name="enter_city">City</string>
+    <string name="add_address">Add Address</string>
+    <string name="add_new_address">Add a new address</string>
+    <string name="select_address">Select Address</string>
+    <string name="delete">Delete</string>
+    <string name="address_name">Set Title: My Home/Work,etc</string>
+    <string name="address_title">My Address</string>
+    <string name="items">Items</string>
+    <string name="more">more</string>
+    <string name="no_data">No Items Available</string>
+    <string name="add_more">Add</string>
+    <string name="add_cart">Add to Cart</string>
+    <string name="close">close</string>
+    <string name="complete_order">Complete Order</string>
+    <string name="add">Add</string>
+    <string name="view_more">View\nMore...</string>
+    <string name="my_profile">My Profile</string>
+    <string name="username">Username</string>
+    <string name="fgtpwd">Forgot Password?</string>
+    <string name="mius">-</string>
+    <string name="plus">+</string>
+    <string name="view_cart">View Cart</string>
+    <string name="item">Item</string>
+    <string name="veg">Veg</string>
+    <string name="veg_only">Veg Only</string>
+    <string name="filter">Filter</string>
+    <string name="recommended">RECOMMENDED(Best Seller)</string>
+    <string name="search_food">Search for food</string>
+    <string name="instruction">Any Instruction?</string>
+    <string name="proceed_pay">Proceed to pay</string>
+    <string name="view_bill">View Bill</string>
+    <string name="apply_coupon">Apply Coupon</string>
+    <string name="bill_details">Bill Details</string>
+    <string name="item_total">Item Total</string>
+    <string name="charges">Charges</string>
+    <string name="delivery_fee">Delivery Fee</string>
+    <string name="discount">Discount</string>
+    <string name="total">Total to Pay</string>
+    <string name="arrive_in">Arrive In</string>
+    <string name="mint">40 MINT</string>
+    <string name="payment">Payment</string>
+    <string name="cod">CASH ON DELIVERY</string>
+    <string name="address">Address</string>
+    <string name="to_pay">To Pay</string>
+    <string name="amount">Amount</string>
+    <string name="place_order">Place Order</string>
+    <string name="booking_status">Booking Status</string>
+    <string name="thank_you">Thank You</string>
+    <string name="order_placed">Your Order has been placed.</string>
+    <string name="our_delivery">Our Delivery contact you soon.</string>
+    <string name="back_to_home"><![CDATA[move back to home -->]]></string>
+    <string name="order_now">Order Now!!!</string>
+    <string name="skip_login">Skip Login</string>
+    <string name="enter_email">Enter Email</string>
+    <string name="continu">Continue</string>
+    <string name="enter_otp">Enter Otp</string>
+    <string name="submit">Submit</string>
+
+    <string-array name="state">
+        <item>Select state</item>
+        <item>Delhi</item>
+        <item>Uttar Pradesh</item>
+        <item>Haryana</item>
+        <item>Goa</item>
+        <item>Maharashtra</item>
+    </string-array>
+</resources>

@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:padding="@dimen/DP2"
+    android:layout_height="wrap_content"
+    tools:ignore="DisableBaselineAlignment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="1"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.40"
+            android:paddingLeft="@dimen/DP8"
+            android:orientation="horizontal"
+            tools:ignore="UseCompoundDrawables">
+
+            <ImageView
+                android:id="@+id/img_veg_nonveg"
+                android:layout_width="@dimen/DP15"
+                android:layout_height="@dimen/DP15"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/veg"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:id="@+id/txt_cartitem_name"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/DP50"
+                android:text="@string/item"
+                android:gravity="center_vertical|start"
+                android:padding="@dimen/DP8"
+                android:textColor="@color/black"
+                android:textStyle="normal"
+                android:textSize="@dimen/SP14"
+                android:layout_gravity="center_vertical"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/DP50"
+            android:layout_weight="0.60"
+            android:weightSum="1"
+            android:layout_gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/ln_cart_plusminus"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/DP8"
+                android:layout_marginBottom="@dimen/DP8"
+                android:layout_weight="0.40"
+                android:layout_gravity="center_vertical"
+                android:orientation="horizontal"
+                android:weightSum="1"
+                android:padding="@dimen/DP2"
+                android:background="@drawable/add_button_background">
+
+                <Button
+                    android:id="@+id/btn_minus"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/white"
+                    android:text="@string/mius"
+                    android:textColor="@color/black"
+                    android:layout_weight="0.33"/>
+
+                <TextView
+                    android:id="@+id/txt_quantity"
+                    android:layout_width="match_parent"
+                    android:layout_weight="0.33"
+                    android:text="0"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:textColor="@color/black"
+                    android:background="@color/light_gray"
+                    android:layout_height="match_parent" />
+
+                <Button
+                    android:id="@+id/btn_plus"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/plus"
+                    android:textColor="@color/black"
+                    android:background="@color/white"
+                    android:layout_weight="0.33"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/txt_cartitem_price"
+                android:layout_width="match_parent"
+                android:layout_weight="0.60"
+                android:layout_height="@dimen/DP50"
+                android:text="@string/item"
+                android:gravity="center_vertical"
+                android:padding="@dimen/DP5"
+                android:textColor="@color/blue"
+                android:textStyle="bold"
+                android:textSize="@dimen/SP14"
+                android:layout_gravity="center_vertical"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

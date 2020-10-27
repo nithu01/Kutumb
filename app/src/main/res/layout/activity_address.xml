@@ -1,0 +1,416 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.AddressActivity">
+
+    <RelativeLayout
+        android:id="@+id/hidden_panel_location"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <RelativeLayout
+            android:id="@+id/rl_search_location"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/DP60">
+
+            <ImageView
+                android:id="@+id/img_back_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/back_arrow"
+                android:layout_centerVertical="true"
+                android:padding="@dimen/DP15"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_toRightOf="@+id/img_back_location"
+                android:text="@string/delivery_address"
+                android:layout_centerVertical="true"
+                android:textSize="@dimen/SP18"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/img_back_location"
+                tools:ignore="RelativeOverlap" />
+
+
+            <ProgressBar
+                android:id="@+id/progress_bar_location"
+                android:layout_width="@dimen/DP35"
+                android:layout_height="@dimen/DP35"
+                android:padding="@dimen/DP10"
+                android:visibility="gone"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_alignParentEnd="true" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/DP1"
+                android:background="@color/text_gray"
+                android:layout_alignParentBottom="true"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_current_location"
+            android:layout_below="@+id/rl_search_location"
+            android:layout_width="match_parent"
+            android:padding="@dimen/DP10"
+            android:visibility="gone"
+            android:background="@drawable/rl_back"
+            android:layout_height="@dimen/DP70">
+
+            <ImageView
+                android:id="@+id/img_current_locaton"
+                android:layout_width="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/DP8"
+                android:src="@drawable/location"
+                tools:ignore="ContentDescription" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_toRightOf="@+id/img_current_locaton"
+                android:layout_height="@dimen/DP60"
+                android:orientation="vertical"
+                android:layout_toEndOf="@+id/img_current_locaton">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/current_location"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/SP18"
+                    android:textStyle="bold"
+                    android:paddingLeft="@dimen/DP8"
+                    android:paddingTop="@dimen/DP8"
+                    android:paddingStart="@dimen/DP8"
+                    tools:ignore="RtlSymmetry" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/enable_loc_service"
+                    android:textSize="@dimen/SP14"
+                    android:paddingLeft="@dimen/DP8"
+                    android:paddingStart="@dimen/DP8"
+                    tools:ignore="RtlSymmetry" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/DP1"
+                android:background="@color/black"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="@dimen/DP50"
+                android:layout_marginStart="@dimen/DP50" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_addres_list"
+            android:layout_width="match_parent"
+            android:visibility="gone"
+            android:layout_below="@+id/rl_current_location"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/btn_add_new_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimaryDark"
+                android:text="@string/add_new_address"
+                android:textColor="@color/white"
+                android:layout_margin="@dimen/DP15"
+                android:textSize="@dimen/SP18"
+                android:textAllCaps="true"
+                android:textStyle="bold"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_below="@+id/btn_add_new_address"
+                android:id="@+id/recyclerview_delivery_address"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+
+        </RelativeLayout>
+
+        <ScrollView
+            android:id="@+id/scrollview_add_address"
+            android:layout_width="match_parent"
+            android:scrollbars="none"
+
+            android:isScrollContainer="true"
+            android:layout_below="@+id/rl_current_location"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:text="@string/add_new_address"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/SP18"
+                    android:textAllCaps="true"
+                    android:layout_margin="@dimen/DP8"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/address_name"
+                    android:textColor="@color/text_gray"
+                    android:textSize="@dimen/SP14"
+                    android:layout_marginLeft="@dimen/DP8"
+                    android:textStyle="bold"
+                    android:layout_marginStart="@dimen/DP8" />
+
+                <EditText
+                    android:id="@+id/edittext_address_title"
+                    android:layout_margin="8dp"
+                    android:background="@drawable/text_background"
+                    android:layout_width="match_parent"
+                    android:hint="@string/address_title"
+                    android:paddingLeft="@dimen/DP8"
+                    android:paddingRight="@dimen/DP8"
+                    android:imeOptions="actionNext"
+                    android:singleLine="true"
+                    android:textColor="@color/black"
+                    android:inputType="text"
+                    android:textSize="@dimen/SP14"
+                    android:textStyle="bold"
+                    android:textColorHint="@color/text_gray"
+                    android:layout_height="@dimen/DP60"
+                    android:paddingStart="@dimen/DP8"
+                    tools:ignore="Autofill" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/DP1"
+                    android:background="@color/text_gray"
+                    android:layout_marginTop="@dimen/DP8"
+                    android:layout_marginBottom="@dimen/DP8"
+                    android:layout_marginRight="@dimen/DP80"
+                    android:layout_marginLeft="@dimen/DP80"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:weightSum="1"
+                    android:layout_margin="@dimen/DP5"
+                    android:layout_height="@dimen/DP60"
+                    tools:ignore="DisableBaselineAlignment">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:id="@+id/input_first_name"
+                        android:layout_weight="0.50"
+                        android:layout_margin="@dimen/DP3"
+                        android:layout_height="match_parent">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/edittext_first_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:hint="@string/enter_firstname"
+                            android:imeOptions="actionNext"
+                            android:inputType="textCapCharacters"
+                            android:maxLines="1"
+                            android:paddingStart="@dimen/DP8"
+                            android:paddingLeft="@dimen/DP8"
+                            android:singleLine="true"
+                            android:textColor="@color/black"
+                            android:textColorHint="@color/black"
+                            android:textSize="@dimen/SP14"
+                            android:textStyle="normal"
+                            tools:ignore="RtlSymmetry" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:id="@+id/input_last_name"
+                        android:layout_weight="0.50"
+                        android:layout_margin="@dimen/DP3"
+                        android:layout_height="match_parent">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/edittext_last_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:textSize="@dimen/SP14"
+                            android:paddingLeft="@dimen/DP8"
+                            android:paddingRight="@dimen/DP8"
+                            android:hint="@string/enter_last_name"
+                            android:imeOptions="actionNext"
+                            android:textColorHint="@color/black"
+                            android:inputType="textCapCharacters"
+                            android:textColor="@color/black"
+                            android:textStyle="normal"
+                            android:maxLines="1"
+                            android:singleLine="true"
+                            tools:ignore="RtlSymmetry" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </LinearLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:id="@+id/input_pincode"
+                    android:layout_margin="@dimen/DP8"
+                    android:layout_height="@dimen/DP60">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edittext_pincode"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:textSize="@dimen/SP14"
+                        android:paddingLeft="@dimen/DP8"
+                        android:paddingRight="@dimen/DP8"
+                        android:hint="@string/enter_pincode"
+                        android:imeOptions="actionNext"
+                        android:textColorHint="@color/black"
+                        android:inputType="number"
+                        android:maxLength="6"
+                        android:textColor="@color/black"
+                        android:textStyle="normal"
+                        android:maxLines="1"
+                        android:singleLine="true"
+                        tools:ignore="RtlSymmetry" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/DP1"
+                    android:background="@color/text_gray"
+                    android:layout_marginTop="@dimen/DP8"
+                    android:layout_marginBottom="@dimen/DP8"
+                    android:layout_marginRight="@dimen/DP80"
+                    android:layout_marginLeft="@dimen/DP80"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/street_address"
+                    android:textColor="@color/text_gray"
+                    android:textSize="@dimen/SP14"
+                    android:layout_marginLeft="@dimen/DP8"
+                    android:textStyle="bold"
+                    android:layout_marginStart="@dimen/DP8" />
+
+                <EditText
+                    android:id="@+id/edittext_address_one"
+                    android:layout_margin="8dp"
+                    android:background="@drawable/text_background"
+                    android:layout_width="match_parent"
+                    android:hint="@string/add_line_one"
+                    android:paddingLeft="@dimen/DP8"
+                    android:paddingRight="@dimen/DP8"
+                    android:imeOptions="actionNext"
+                    android:singleLine="true"
+                    android:textColor="@color/black"
+                    android:inputType="text"
+                    android:textSize="@dimen/SP14"
+                    android:textStyle="bold"
+                    android:textColorHint="@color/text_gray"
+                    android:layout_height="@dimen/DP60"
+                    android:paddingStart="@dimen/DP8"
+                    tools:ignore="Autofill" />
+
+                <EditText
+                    android:id="@+id/edittext_address_two"
+                    android:layout_margin="8dp"
+                    android:background="@drawable/text_background"
+                    android:layout_width="match_parent"
+                    android:hint="@string/add_line_two"
+                    android:paddingLeft="@dimen/DP8"
+                    android:paddingRight="@dimen/DP8"
+                    android:imeOptions="actionNext"
+                    android:singleLine="true"
+                    android:textColor="@color/black"
+                    android:inputType="text"
+                    android:textSize="@dimen/SP14"
+                    android:textStyle="bold"
+                    android:textColorHint="@color/text_gray"
+                    android:layout_height="@dimen/DP60"
+                    android:paddingStart="@dimen/DP8"
+                    tools:ignore="Autofill" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:id="@+id/input_city"
+                    android:layout_margin="@dimen/DP8"
+                    android:layout_height="@dimen/DP60">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edittext_city"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:textSize="@dimen/SP14"
+                        android:paddingRight="@dimen/DP8"
+                        android:paddingLeft="@dimen/DP8"
+                        android:hint="@string/enter_city"
+                        android:imeOptions="actionNext"
+                        android:textColorHint="@color/black"
+                        android:inputType="text"
+                        android:textColor="@color/black"
+                        android:textStyle="normal"
+                        android:maxLines="1"
+                        android:singleLine="true"
+                        tools:ignore="RtlSymmetry"
+                        android:paddingStart="@dimen/DP8" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/DP60"
+                    android:layout_margin="@dimen/DP8"
+                    android:visibility="gone"
+                    android:padding="@dimen/DP3"
+                    android:background="@drawable/text_background">
+
+                    <Spinner
+                        android:id="@+id/spinner_state"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                    </Spinner>
+
+                </RelativeLayout>
+
+                <Button
+                    android:id="@+id/btn_add_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorPrimaryDark"
+                    android:layout_margin="@dimen/DP15"
+                    android:textStyle="bold"
+                    android:text="@string/add_address"
+                    android:textColor="@color/white"/>
+
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

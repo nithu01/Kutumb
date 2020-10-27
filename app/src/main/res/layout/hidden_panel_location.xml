@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@+id/hidden_panel_location"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/DP70">
+
+        <ImageView
+            android:id="@+id/img_back_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/back_arrow"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/DP15"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_toRightOf="@+id/img_back_location"
+            android:hint="@string/delivery_location"
+            android:layout_margin="@dimen/DP8"
+            android:id="@+id/input_user_location"
+            android:layout_height="match_parent"
+            android:layout_toEndOf="@+id/img_back_location">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edittext_user_location"
+                android:layout_width="match_parent"
+                android:background="@null"
+                android:layout_height="match_parent"
+                android:hint=""
+                android:imeOptions="actionSend|actionGo|actionDone"
+                android:inputType="phone"
+                android:maxLength="10"
+                android:textColor="@color/black"
+                android:textStyle="normal"
+                android:maxLines="1"
+                android:singleLine="true">
+            </com.google.android.material.textfield.TextInputEditText>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <ProgressBar
+            android:id="@+id/progress_bar_location"
+            android:layout_width="@dimen/DP35"
+            android:layout_height="@dimen/DP35"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/DP1"
+            android:background="@color/text_gray"
+            android:layout_alignParentBottom="true"/>
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

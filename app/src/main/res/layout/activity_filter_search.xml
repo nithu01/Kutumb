@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".Activity.FilterSearchActivity">
+
+    <RelativeLayout
+        android:id="@+id/rl_toolbar_filter"
+        android:layout_width="match_parent"
+        android:layout_margin="@dimen/DP15"
+        android:background="@drawable/border_box"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/edittext_search"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/DP60"
+            android:background="@null"
+            android:layout_toLeftOf="@+id/img_search_filter"
+            android:paddingLeft="@dimen/DP8"
+            android:paddingRight="@dimen/DP8"
+            android:singleLine="true"
+            android:imeOptions="actionDone"
+            android:inputType="text"
+            android:textSize="@dimen/SP14"
+            android:textColor="@color/black"
+            android:hint="@string/search_food"
+            android:layout_centerVertical="true"
+            android:layout_toStartOf="@+id/img_search_filter"
+            tools:ignore="TextFields" />
+
+        <ImageView
+            android:id="@+id/img_search_filter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@android:drawable/ic_menu_search"
+            android:layout_alignParentRight="true"
+            android:padding="@dimen/DP8"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/txt_title_search"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/DP40"
+        android:layout_below="@+id/rl_toolbar_filter"
+        android:text="@string/app_name"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/DP15"
+        android:paddingRight="@dimen/DP15"
+        android:textSize="@dimen/SP16"
+        android:background="@color/light_gray"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerview_filter"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/txt_title_search">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <RelativeLayout
+        android:id="@+id/rl_no_food"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/txt_title_search"
+        android:layout_marginTop="13dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/hiclipart" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

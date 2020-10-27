@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+
+    <androidx.core.widget.NestedScrollView
+        android:isScrollContainer="true"
+        android:scrollbars="none"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="230dp"
+            android:orientation="vertical">
+            <!--            <RelativeLayout-->
+            <!--                android:id="@+id/rl_toolbar_registration"-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:background="#20000000"-->
+            <!--                android:layout_height="@dimen/DP50">-->
+
+            <!--                <ImageView-->
+            <!--                    android:id="@+id/img_back_registration"-->
+            <!--                    android:layout_width="wrap_content"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:src="@drawable/back_white"-->
+            <!--                    android:layout_centerVertical="true"-->
+            <!--                    android:padding="@dimen/DP10"-->
+            <!--                    tools:ignore="ContentDescription" />-->
+
+            <!--                <TextView-->
+            <!--                    android:layout_width="wrap_content"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:text="@string/signup"-->
+            <!--                    android:textStyle="bold|italic"-->
+            <!--                    android:textSize="@dimen/SP18"-->
+            <!--                    android:layout_centerVertical="true"-->
+            <!--                    android:textColor="@color/white"-->
+            <!--                    android:layout_toEndOf="@+id/img_back_registration" />-->
+
+            <!--            </RelativeLayout>-->
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:background="@drawable/logo"
+                android:layout_height="220dp">
+
+                <RelativeLayout
+                    android:id="@+id/rl_toolbar_registration"
+                    android:layout_width="wrap_content"
+                    android:background="#20000000"
+                    android:visibility="gone"
+                    android:layout_height="@dimen/DP50">
+
+                    <ImageView
+                        android:id="@+id/img_back_registration"
+                        android:layout_width="@dimen/DP40"
+                        android:layout_height="@dimen/DP40"
+                        android:layout_centerVertical="true"
+                        android:padding="@dimen/DP10"
+                        android:src="@drawable/ic_nextt"
+                        tools:ignore="ContentDescription" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="SignIn"
+                        android:textStyle="bold|italic"
+                        android:textSize="@dimen/SP18"
+                        android:id="@+id/signin"
+                        android:layout_centerVertical="true"
+                        android:textColor="#ea2f34"
+                        android:layout_toEndOf="@+id/img_back_registration" />
+
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_gravity="center"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:id="@+id/ln_form_regis"
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:visibility="visible"
+                    android:layout_marginTop="@dimen/DP50"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAllCaps="true"
+                        android:visibility="gone"
+                        android:textColor="@color/text_gray"
+                        android:text="@string/enter_firstname"
+                        android:layout_marginStart="@dimen/SP20"/>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/rl_first_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:background="@drawable/rounded_corner"
+                        android:layout_marginLeft="@dimen/DP20"
+                        android:layout_marginRight="@dimen/DP20"
+                        android:backgroundTint="@color/light_gray"
+                        app:cardCornerRadius="@dimen/SP22">
+
+                        <!--                    <ImageView-->
+                        <!--                        android:id="@+id/img_first_name"-->
+                        <!--                        android:layout_width="@dimen/DP50"-->
+                        <!--                        android:layout_height="match_parent"-->
+                        <!--                        android:padding="@dimen/DP10"-->
+                        <!--                        android:src="@drawable/f_name"-->
+                        <!--                        android:layout_centerVertical="true"-->
+                        <!--                        tools:ignore="ContentDescription" />-->
+
+
+                        <EditText
+                            android:id="@+id/edittext_name"
+                            android:layout_width="match_parent"
+                            android:background="@color/transparent"
+                            android:hint="Email or Mobile No."
+                            android:imeOptions="actionNext"
+                            android:singleLine="true"
+                            android:textColorHint="@color/black_trans"
+                            android:textColor="@color/black"
+                            android:inputType="textPersonName"
+                            android:textSize="@dimen/SP16"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="@dimen/DP8"
+                            android:layout_toEndOf="@+id/view_1"
+                            android:paddingStart="@dimen/DP8"
+                            tools:ignore="RtlSymmetry" />
+
+                    </androidx.cardview.widget.CardView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAllCaps="true"
+                        android:visibility="gone"
+                        android:textColor="@color/text_gray"
+                        android:text="@string/enter_last_name"
+                        android:layout_marginTop="@dimen/DP10"
+                        android:layout_marginStart="@dimen/SP20"/>
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAllCaps="true"
+                        android:textColor="@color/text_gray"
+                        android:text="@string/enter_email"
+                        android:visibility="gone"
+                        android:layout_marginTop="@dimen/DP10"
+                        android:layout_marginStart="@dimen/SP20"/>
+
+
+                    <Button
+                        android:id="@+id/btn_submit"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:layout_margin="@dimen/SP20"
+                        android:textColor="@color/white"
+                        android:textAllCaps="false"
+                        android:background="@drawable/rounded_corner"
+                        android:text="Forget Password"
+                        android:textSize="@dimen/SP18"/>
+
+                    <Button
+                        android:id="@+id/btn_back"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:layout_marginLeft="@dimen/SP20"
+                        android:layout_marginRight="20dp"
+                        android:textColor="@color/white"
+                        android:textAllCaps="false"
+                        android:background="@drawable/rounded_corner"
+                        android:text="Back"
+                        android:textSize="@dimen/SP18"/>
+
+
+                </LinearLayout>
+
+                <!--            <LinearLayout-->
+                <!--                android:id="@+id/ln_otp_regis"-->
+                <!--                android:layout_width="match_parent"-->
+                <!--                android:layout_height="wrap_content"-->
+                <!--                android:visibility="gone"-->
+                <!--                android:layout_marginTop="@dimen/DP50"-->
+                <!--                android:orientation="vertical">-->
+
+                <!--                <TextView-->
+                <!--                    android:id="@+id/txt_enter_otp"-->
+                <!--                    android:layout_width="match_parent"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:padding="@dimen/DP10"-->
+                <!--                    android:visibility="gone"-->
+                <!--                    android:text="@string/app_name"-->
+                <!--                    android:layout_margin="@dimen/DP10"-->
+                <!--                    android:textColor="@color/black"-->
+                <!--                    android:textSize="@dimen/SP20"/>-->
+
+                <!--                <TextView-->
+                <!--                    android:layout_width="wrap_content"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:textAllCaps="true"-->
+                <!--                    android:visibility="gone"-->
+                <!--                    android:textColor="@color/text_gray"-->
+                <!--                    android:text="@string/enter_otp"-->
+                <!--                    android:layout_marginTop="@dimen/DP10"-->
+                <!--                    android:layout_marginStart="@dimen/SP20"/>-->
+
+
+
+                <!--                <androidx.cardview.widget.CardView-->
+                <!--                    android:id="@+id/rl_otp"-->
+                <!--                    android:layout_width="match_parent"-->
+                <!--                    android:layout_height="@dimen/DP45"-->
+                <!--                    android:layout_marginTop="@dimen/DP4"-->
+                <!--                    android:background="@drawable/text_background"-->
+                <!--                    android:layout_marginLeft="@dimen/DP20"-->
+                <!--                    android:layout_marginRight="@dimen/DP20"-->
+                <!--                    android:backgroundTint="@color/light_gray"-->
+                <!--                    app:cardCornerRadius="22dp">-->
+
+                <!--&lt;!&ndash;                    <ImageView&ndash;&gt;-->
+                <!--&lt;!&ndash;                        android:id="@+id/img_otp"&ndash;&gt;-->
+                <!--&lt;!&ndash;                        android:layout_width="@dimen/DP50"&ndash;&gt;-->
+                <!--&lt;!&ndash;                        android:layout_height="match_parent"&ndash;&gt;-->
+                <!--&lt;!&ndash;                        android:src="@drawable/ic_otpp"&ndash;&gt;-->
+                <!--&lt;!&ndash;                        android:padding="@dimen/DP5"&ndash;&gt;-->
+                <!--&lt;!&ndash;                        android:layout_centerVertical="true"&ndash;&gt;-->
+                <!--&lt;!&ndash;                        tools:ignore="ContentDescription" />&ndash;&gt;-->
+
+
+
+
+                <!--                    <EditText-->
+                <!--                        android:id="@+id/edittext_otp"-->
+                <!--                        android:layout_width="match_parent"-->
+                <!--                        android:background="@color/transparent"-->
+                <!--                        android:hint="@string/enter_otp"-->
+                <!--                        android:imeOptions="actionNext"-->
+                <!--                        android:singleLine="true"-->
+                <!--                        android:textColor="@color/black"-->
+                <!--                        android:inputType="phone"-->
+                <!--                        android:maxLength="6"-->
+                <!--                        android:textSize="@dimen/SP16"-->
+                <!--                        android:textColorHint="@color/black_trans"-->
+                <!--                        android:layout_height="match_parent"-->
+                <!--                        android:layout_marginStart="@dimen/DP8"-->
+                <!--                        android:layout_toEndOf="@+id/view_6"-->
+                <!--                        android:paddingStart="@dimen/DP8"-->
+                <!--                        tools:ignore="Autofill,RtlSymmetry" />-->
+
+                <!--                </androidx.cardview.widget.CardView>-->
+
+                <!--                <Button-->
+                <!--                    android:id="@+id/btn_otp_registration"-->
+                <!--                    android:layout_width="match_parent"-->
+                <!--                    android:layout_height="45dp"-->
+                <!--                    android:layout_margin="@dimen/SP20"-->
+                <!--                    android:textColor="@color/white"-->
+                <!--                    android:textSize="@dimen/SP18"-->
+                <!--                    android:background="@drawable/rounded_corner"-->
+                <!--                    android:text="@string/submit"/>-->
+
+                <!--            </LinearLayout>-->
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+</LinearLayout>

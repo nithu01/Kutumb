@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/spinner_img_city"
+        android:layout_width="@dimen/DP50"
+        android:layout_height="@dimen/DP50"
+        android:padding="@dimen/DP3"
+        android:adjustViewBounds="true"
+        android:layout_gravity="center_vertical"
+        android:scaleType="centerCrop"/>
+
+    <TextView
+        android:id="@+id/spinner_text"
+        android:layout_width="match_parent"
+        android:layout_gravity="center"
+        android:layout_height="wrap_content"
+        android:padding="4dp"
+        android:textStyle="bold"
+        android:textSize="@dimen/SP14"
+        android:textAllCaps="true"
+        android:text="City"
+        android:textColor="@color/text_gray"
+        android:ellipsize="marquee"/>
+
+</LinearLayout>

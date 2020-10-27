@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Activity.CouponActivity">
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/DP20"
+        android:hint="Enter Coupon Code"
+        android:layout_marginRight="@dimen/DP20"
+        android:layout_marginTop="@dimen/DP50"
+        android:id="@+id/coupon_code"/>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_marginTop="@dimen/DP10"
+        android:layout_height="match_parent"
+        android:id="@+id/recyclerview"/>
+
+
+</LinearLayout>

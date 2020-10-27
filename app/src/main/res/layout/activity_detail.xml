@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.DetailActivity">
+
+    <RelativeLayout
+        android:id="@+id/rl_toolbar_detail"
+        android:layout_width="match_parent"
+        android:background="@color/green"
+        android:layout_height="@dimen/DP50">
+
+        <ImageView
+            android:id="@+id/img_back_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/back_white"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/DP10"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/detail"
+            android:layout_toRightOf="@+id/img_back_detail"
+            android:layout_centerVertical="true"
+            android:textStyle="bold"
+            android:textSize="@dimen/SP18"
+            android:textColor="@color/white"
+            android:layout_toEndOf="@+id/img_back_detail" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_below="@+id/rl_toolbar_detail"
+        android:layout_width="match_parent"
+        android:layout_marginTop="@dimen/DP10"
+        android:orientation="vertical"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/img_item_detail"
+            android:layout_width="match_parent"
+            android:src="@drawable/item"
+            android:scaleType="fitXY"
+            android:layout_height="@dimen/DP180" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txt_price_accessories"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="price(1)"
+                android:layout_gravity="end"
+                android:padding="@dimen/DP8"
+                android:textAllCaps="true"
+                android:textColor="@color/black"
+                android:textSize="12sp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:text="@string/quantity"
+                    android:textColor="@color/black"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center"
+                    android:textSize="@dimen/SP18"
+                    android:padding="@dimen/DP5"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/DP50"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/decrease"
+                        android:layout_width="@dimen/DP50"
+                        android:layout_height="@dimen/DP45"
+                        android:text="-"
+                        android:textSize="@dimen/SP18"
+                        android:background="@drawable/add_button_background"/>
+
+                    <TextView
+                        android:id="@+id/txt_qty_accessories"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1"
+                        android:layout_margin="@dimen/DP5"
+                        android:textStyle="bold"
+                        android:textSize="@dimen/SP18" />
+
+                    <Button
+                        android:id="@+id/increase"
+                        android:layout_width="@dimen/DP50"
+                        android:layout_height="@dimen/DP45"
+                        android:textSize="@dimen/SP18"
+                        android:text="+"
+                        android:background="@drawable/add_button_background"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/add_button_background"
+            android:layout_margin="@dimen/DP15"
+            android:text="@string/orders"
+            android:textSize="@dimen/SP18"
+            android:textColor="@color/black"/>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

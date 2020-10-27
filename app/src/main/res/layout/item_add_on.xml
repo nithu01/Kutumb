@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/card_view_addon"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    card_view:cardBackgroundColor="@color/white"
+    card_view:cardCornerRadius="@dimen/DP4"
+    card_view:cardElevation="@dimen/DP4"
+    card_view:cardUseCompatPadding="true">
+
+    <RelativeLayout
+        android:layout_width="@dimen/DP200"
+        android:layout_height="@dimen/DP220">
+
+        <ImageView
+            android:id="@+id/img_add_on"
+            android:layout_width="match_parent"
+            android:scaleType="center"
+            android:src="@drawable/foodie"
+            android:layout_height="@dimen/DP180"
+            tools:ignore="ContentDescription"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="2"
+            android:layout_marginBottom="@dimen/DP5"
+            android:layout_below="@+id/img_add_on"
+            android:orientation="horizontal">
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_below="@+id/img_add_on"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txt_name_addon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/DP5"
+                android:paddingRight="@dimen/DP5"
+                android:textColor="@color/black"
+                android:textSize="@dimen/SP14"
+                android:text="@string/app_name"/>
+
+            <TextView
+                android:id="@+id/txt_price_addon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/blue"
+                android:paddingStart="@dimen/DP5"
+                android:textAllCaps="true"
+                android:paddingEnd="@dimen/DP5"
+                android:textSize="@dimen/SP14"
+                android:text="@string/app_name"/>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_add_addons"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+
+            android:padding="@dimen/DP5"
+            android:background="@drawable/rl_back"
+            android:layout_height="@dimen/DP40">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_alignParentBottom="true"
+                android:text="@string/add"
+                android:paddingBottom="@dimen/DP4"
+                android:layout_toStartOf="@+id/img_add_addon"/>
+
+            <ImageView
+                android:id="@+id/img_add_addon"
+                android:layout_width="@dimen/DP50"
+                android:layout_height="@dimen/DP50"
+                android:layout_centerVertical="true"
+                android:layout_alignParentEnd="true"
+                android:padding="@dimen/DP4"
+                android:background="@color/transparent"
+                android:src="@drawable/add_basket"
+                tools:ignore="ContentDescription" />
+
+        </RelativeLayout>
+
+        </LinearLayout>
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

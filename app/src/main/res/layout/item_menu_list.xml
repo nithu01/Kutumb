@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/cardview_menu"
+    android:layout_marginBottom="@dimen/DP5">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_marginBottom="@dimen/DP5"
+        android:layout_height="wrap_content">
+
+<!--        <View-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="@dimen/DP1"-->
+<!--            android:layout_marginTop="@dimen/DP10"-->
+<!--            android:background="@color/text_gray"/>-->
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="@dimen/DP10"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/txt_menu_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textAllCaps="true"
+                android:padding="@dimen/DP5"
+                android:text="@string/recommended"
+                android:textSize="@dimen/SP16" />
+
+            <Button
+                android:id="@+id/btn_more"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/DP35"
+                android:layout_alignParentRight="true"
+                android:gravity="center"
+                android:text="@string/more"
+                android:visibility="gone"
+                android:textStyle="bold"
+                android:background="@color/colorPrimaryDark"
+                android:textSize="@dimen/SP14"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:layout_centerVertical="true"
+                android:layout_alignParentEnd="true" />
+
+        </RelativeLayout>
+
+       <!-- <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:scrollbars="none"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">-->
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerview_menu_item"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="@dimen/DP6"
+                    android:layout_gravity="bottom"
+                    android:layout_height="wrap_content"
+                    android:divider="@null"
+                    android:orientation="horizontal"/>
+
+<!--
+                <android.support.v7.widget.CardView
+                    android:id="@+id/cardview_more"
+                    android:layout_width="@dimen/DP180"
+                    android:layout_height="match_parent"
+                    card_view:cardCornerRadius="@dimen/DP3"
+                    card_view:cardElevation="@dimen/DP5"
+                    card_view:contentPadding="@dimen/DP3"
+                    android:padding="@dimen/DP5"
+                    android:background="@mipmap/ic_launcher"
+                    card_view:cardBackgroundColor="@color/white"
+                    android:layout_marginTop="@dimen/DP8"
+                    android:paddingLeft="@dimen/DP8"
+                    android:paddingRight="@dimen/DP8"
+                    android:layout_marginBottom="@dimen/DP2">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:id="@+id/img_viewmore"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/DP60"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/logo"/>
+
+                        <TextView
+                            android:layout_below="@+id/img_viewmore"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/text_gray"
+                            android:textStyle="bold"
+                            android:layout_centerVertical="true"
+                            android:layout_centerHorizontal="true"
+                            android:gravity="center"
+                            android:text="@string/view_more"
+                            android:textSize="@dimen/SP20"/>
+
+                    </RelativeLayout>
+
+
+                </android.support.v7.widget.CardView>
+-->
+
+            <!--</LinearLayout>
+
+
+        </HorizontalScrollView>-->
+
+
+    </LinearLayout>
+
+
+</LinearLayout>
